@@ -1,4 +1,5 @@
 import Foundation
+import Toml
 
 public struct SharedConfig {
 
