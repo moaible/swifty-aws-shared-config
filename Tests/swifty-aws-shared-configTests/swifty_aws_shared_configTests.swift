@@ -14,7 +14,7 @@ final class swifty_aws_shared_configTests: XCTestCase {
     }
     
     func testCredentialsFilename() {
-        XCTAssertEqual(SharedConfig.configFilename, "\(homeDirectory)/.aws/credentials")
+        XCTAssertEqual(SharedConfig.credentialsFilename, "\(homeDirectory)/.aws/credentials")
     }
 
     static var allTests = [

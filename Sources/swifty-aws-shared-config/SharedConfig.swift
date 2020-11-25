@@ -17,4 +17,14 @@ public struct SharedConfig {
         return ProcessInfo.processInfo.environment["HOME"]!
         #endif
     }
+
+    public static func readAWSConfig() throws -> String {
+        let fileURL = URL(fileURLWithPath: SharedConfig.configFilename)
+        return try String.init(contentsOf: fileURL)
+    }
+    
+    public static func readAWSCredentials() throws -> String {
+        let fileURL = URL(fileURLWithPath: SharedConfig.credentialsFilename)
+        return try String.init(contentsOf: fileURL)
+    }
 }
