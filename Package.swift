@@ -12,13 +12,14 @@ let package = Package(
             targets: ["swifty-aws-shared-config"]),
     ],
     dependencies: [
+        .package(url: "https://github.com/Bouke/INI.git", "1.0.0"..<"2.0.0")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "swifty-aws-shared-config",
-            dependencies: []),
+            dependencies: ["INI"]),
         .testTarget(
             name: "swifty-aws-shared-configTests",
             dependencies: ["swifty-aws-shared-config"]),

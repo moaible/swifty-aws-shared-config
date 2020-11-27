@@ -1,4 +1,5 @@
 import Foundation
+import INI
 
 public struct SharedConfig {
 
